@@ -6,7 +6,7 @@ import PropTypes from "prop-types";
 const ThemeChangeContext = createContext();
 
 const ThemeChangeProvider = ({ children }) => {
-    const [themeStatus, setThemeStatus] = useState(true);
+    const [themeStatus, setThemeStatus] = useState(false);
     const [initialized, setInitialized] = useState(false);
 
     const toggleTheme = useCallback(() => setThemeStatus((prev) => !prev), []);

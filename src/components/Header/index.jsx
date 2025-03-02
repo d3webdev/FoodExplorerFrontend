@@ -117,7 +117,7 @@ export function Header({ receipt = true }) {
                     value="theme"
                     onClick={() => handleTheme()}
                 >
-                    {themeStatus ? <FiMoon /> : <FiSun />}
+                    {themeStatus ? <FiSun /> : <FiMoon />}
                 </button>
                 <button className="btn-logout" onClick={() => handleSignOut()}>
                     <FiLogOut size={32} />

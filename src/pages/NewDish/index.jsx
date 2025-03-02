@@ -172,6 +172,7 @@ export function NewDish() {
                 setTags([]);
                 setNewTags('');
                 toast.success('Prato adicionado com sucesso!');
+                navigate('/');
             } catch (error) {
                 if (error.response) {
                     toast.error(error.response.data.message);
@@ -182,7 +183,7 @@ export function NewDish() {
         };
 
         dishId && imageFile && sendImage();
-    }, [imageFile, dishId]);
+    }, [imageFile, dishId, navigate]);
 
     return (
         <MainPage>
