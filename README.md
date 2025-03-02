@@ -28,7 +28,7 @@ git clone https://github.com/csrprojects/FoodExplorerFrontend.git
 2. Acesse o diretório do projeto:
 
 ```sh
-cd food-explorer-frontend
+cd FoodExplorerFrontend
 ```
 
 3. Instale as dependências:
@@ -71,25 +71,35 @@ npm run build
 
 #### Autenticação
 
-- **Login**: Acesse a página inicial e informe e-mail e senha para entrar no sistema
-- **Criação de conta**: Na tela de login, clique em "Criar uma conta" para registrar-se como cliente
+- **Login**: Acesse a página inicial e informe e-mail e senha para entrar no sistema</br>
+<img width="233" alt="Login-screen" src="https://github.com/user-attachments/assets/dd5193a8-3376-47cc-ad33-e6b21ce1b887" /></br>
+<p></p>
+
+- **Criação de conta**: Na tela de login, clique em "Criar uma conta" para registrar-se como cliente </br>
+<img width="225" alt="create_account" src="https://github.com/user-attachments/assets/a9855d7d-2e1e-4634-af59-2cd40184b2a4" /></br>
+<p></p>
 
 #### Interface
 
-- **Mudança de tema**: Clique no ícone de sol/lua no cabeçalho para alternar entre os modos claro e escuro
+- **Mudança de tema**: Clique no ícone de sol/lua no cabeçalho para alternar entre os modos claro e escuro. </br>
+<img width="124" alt="theme_moon" src="https://github.com/user-attachments/assets/f4fbb20e-8e5c-4f7f-82fe-3fe20bacf5d4" />
+<img width="124" alt="theme_sun" src="https://github.com/user-attachments/assets/8047db42-9e60-494b-87b1-32df664a13a5" />
 
 ### Funcionalidades para Administradores
 
 Após fazer login como administrador:
 
-- **Adicionar pratos**: Clique em "Novo prato" para acessar o formulário de criação, onde você pode:
+- **Adicionar pratos**: Clique em "Novo prato" para acessar o formulário de criação, onde você pode:</br>
+<img width="780" alt="Formulario_newdish" src="https://github.com/user-attachments/assets/bc8d77a2-877d-4e7d-bc34-07897730b277" /></br>
 
     - Fazer upload de imagens
     - Preencher nome, categoria, preço e descrição
     - Adicionar ingredientes
     - Aplicar descontos
 
-- **Editar pratos**: Ao clicar em um prato existente, você terá acesso às opções de edição:
+- **Editar pratos**: Clique no lápis localizado no canto superior esquerdo para ter acesso às opções de edição: </br>
+<img width="780" alt="Formulario_editdish" src="https://github.com/user-attachments/assets/aee48fc5-faaa-42da-84a0-1b78f480495b" /></br>
+
     - Modificar todas as informações do prato
     - Excluir o prato do menu
 
