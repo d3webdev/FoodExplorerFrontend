@@ -220,13 +220,16 @@ export function NewDish() {
 
                     <Input
                         className="dish-name"
+                        id={'name'}
                         Label="Nome"
+                        autocomplete={"off"}
                         placeholder="Ex.: Salada Ceasar"
                         onChange={(e) => setName(e.target.value)}
                         value={name}
                     />
                     <Select
                         className="dish-category"
+                        id={"category"}
                         Label="Categoria"
                         options={selectOptions}
                         placeholder="Refeição"
@@ -242,12 +245,14 @@ export function NewDish() {
                                         <InputTag
                                             key={index}
                                             value={tag}
+                                            id={index}
                                             onClick={() => handleDelTag(tag)}
                                         />
                                     ))}
                                 <InputTag
                                     placeholder={'Adicionar'}
                                     isNew
+                                    id={"newTag"}
                                     onChange={(e) => setNewTags(e.target.value)}
                                     value={newTags}
                                     onClick={handleAddTag}
@@ -256,6 +261,7 @@ export function NewDish() {
                         </Tags>
                         <Input
                             className="dish-discount"
+                            id={'discount'}
                             Label="Desconto"
                             placeholder="Ex: 0,05"
                             onChange={(e) => setDiscount(e.target.value)}
@@ -263,6 +269,7 @@ export function NewDish() {
                         />
                         <Input
                             className="dish-price"
+                            id={'price'}
                             Label="Preço"
                             placeholder="0,00"
                             currency={'R$'}

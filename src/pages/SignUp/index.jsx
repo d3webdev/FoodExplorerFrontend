@@ -47,6 +47,7 @@ export function SignUp() {
             <h1>Crie sua conta</h1>
                 <Input
                     icon={null}
+                    id={'field0'}
                     Label={'Seu nome'}
                     type={'text'}
                     placeholder="Exemplo: Maria da Silva"
@@ -54,6 +55,7 @@ export function SignUp() {
                 />
                 <Input
                     icon={null}
+                    id={'field1'}
                     Label={'Email'}
                     type={'text'}
                     placeholder="Exemplo: exemplo@exemplo.com"
@@ -61,6 +63,7 @@ export function SignUp() {
                 />
                 <Input
                     icon={null}
+                    id={'field2'}
                     Label={'Senha'}
                     type={'password'}
                     placeholder="No mínimo 6 caracteres"

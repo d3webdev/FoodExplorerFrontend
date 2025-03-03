@@ -34,6 +34,7 @@ export function SignIn() {
                 <h1>Faça login</h1>
                 <Input
                     icon={null}
+                    id={'field0'}
                     Label={'Login'}
                     type={'text'}
                     placeholder="Exemplo: exemplo@exemplo.com"
@@ -42,6 +43,7 @@ export function SignIn() {
                 <Input
                     icon={null}
                     Label={'Senha'}
+                    id={'field1'}
                     type={'password'}
                     placeholder="No mínimo 6 caracteres"
                     onChange={(e) => setPassword(e.target.value)}

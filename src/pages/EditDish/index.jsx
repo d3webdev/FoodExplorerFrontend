@@ -25,7 +25,7 @@ export function EditDish() {
     const [discount, setDiscount] = useState('');
     const [price, setPrice] = useState('');
     const [description, setDescription] = useState('');
-    
+
     const params = useParams();
     const [dish_id, setDishId] = useState(Number(params.id));
 
@@ -130,11 +130,9 @@ export function EditDish() {
             category,
             price: parseFloat(String(price).replace(',', '.')),
             discount,
-            image: image,
             description,
             ingredients: tags,
         };
-
         try {
             await api.put('/dishes', data, {
                 withCredentials: true,
@@ -205,7 +203,7 @@ export function EditDish() {
     }
 
     useEffect(() => {
-        if(!dish_id) return;
+        if (!dish_id) return;
         (async () => {
             try {
                 const response = await getDish(dish_id);
@@ -257,13 +255,16 @@ export function EditDish() {
 
                     <Input
                         className="dish-name"
+                        id={'name'}
                         Label="Nome"
                         value={name}
+                        autocomplete={"off"}
                         placeholder="Ex.: Salada Ceasar"
                         onChange={(e) => setName(e.target.value)}
                     />
                     <Select
                         className="dish-category"
+                        id={'category'}
                         Label="Categoria"
                         value={category}
                         options={selectOptions}
@@ -279,12 +280,14 @@ export function EditDish() {
                                         <InputTag
                                             key={index}
                                             value={tag}
+                                            id={index}
                                             onClick={() => handleDelTag(tag)}
                                         />
                                     ))}
                                 <InputTag
                                     placeholder={'Adicionar'}
                                     isNew
+                                    id={'newTag'}
                                     onChange={(e) => setNewTags(e.target.value)}
                                     value={newTags}
                                     onClick={handleAddTag}
@@ -293,6 +296,7 @@ export function EditDish() {
                         </Tags>
                         <Input
                             className="dish-discount"
+                            id={'discount'}
                             Label="Desconto"
                             placeholder="Ex: 0,05"
                             onChange={(e) => setDiscount(e.target.value)}
@@ -300,6 +304,7 @@ export function EditDish() {
                         />
                         <Input
                             className="dish-price"
+                            id={'price'}
                             Label="Preço"
                             currency={'R$'}
                             placeholder="0,00"

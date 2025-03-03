@@ -2,13 +2,13 @@ import { Container } from './styles';
 import { FiPlus, FiX } from 'react-icons/fi';
 import PropTypes from 'prop-types';
 
-export function InputTag({ text, isNew = false, onClick, ...rest }) {
+export function InputTag({ text, isNew = false, id = null, onClick, ...rest }) {
     let size = 0;
     if (text) {size = Math.max((text.length - 1), 1);}
 
     return (
-        <Container $isNew={isNew}>
-            <input type="text" value={text} disabled={!isNew} size={size} {...rest} />
+        <Container $isNew={isNew} id={id}>
+            <input type="text" id={id} value={text} disabled={!isNew} size={size} {...rest} />
             <button type="button" onClick={onClick}>
                 {isNew ? <FiPlus size={16} /> : <FiX size={16} />}
             </button>
@@ -18,6 +18,7 @@ export function InputTag({ text, isNew = false, onClick, ...rest }) {
 
 InputTag.propTypes = {
     text: PropTypes.string,
+    id: PropTypes.string,
     isNew: PropTypes.bool,
     onClick: PropTypes.func,
 };
