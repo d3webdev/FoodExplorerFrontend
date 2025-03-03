@@ -34,7 +34,7 @@ export function DisplayDishes({ title, dishes, onToggleFavorite }) {
     return (
         <Container className="dish-display" >
             <h1>{title}</h1>
-            <button className="prev" onClick={prev}>
+            <button className="prev" aria-label={"Back page"} onClick={prev}>
                 ❮
             </button>
             <Dishes ref={dishesRef}>
@@ -50,11 +50,12 @@ export function DisplayDishes({ title, dishes, onToggleFavorite }) {
                                 <img src={dishAvt} alt={dish.name} />
                             )}
                             {role === 'admin' ? (
-                                <button onClick={() => handleDish(dish.id)}>
+                                <button aria-label={"Edit dish"} onClick={() => handleDish(dish.id)}>
                                     <PiPencilIcon size={24} />
                                 </button>
                             ) : (
                                 <button
+                                    aria-label={"Favorite dish"}
                                     onClick={() => onToggleFavorite(dish.id)}
                                 >
                                     <HeartIcon
@@ -91,7 +92,7 @@ export function DisplayDishes({ title, dishes, onToggleFavorite }) {
                     </div>
                 ))}
             </Dishes>
-            <button className="next" onClick={next}>
+            <button  aria-label={"Next"} className="next" onClick={next}>
                 ❯
             </button>
         </Container>

@@ -23,7 +23,7 @@ export function SideMenu({ menuIsActive, onCloseMenu }) {
     return (
         <Container data-menu-active={menuIsActive}>
             <Header>
-                <button onClick={onCloseMenu}>
+                <button aria-label={"Close"} onClick={onCloseMenu}>
                     <PiX /> Menu
                 </button>
             </Header>
@@ -35,11 +35,11 @@ export function SideMenu({ menuIsActive, onCloseMenu }) {
                     placeholder="Busque por pratos ou ingredientes"
                 />
                 {role === 'admin' && (
-                    <button type="button" onClick={() => handleNavigate()}>
+                    <button aria-label={"New Dish"} type="button" onClick={() => handleNavigate()}>
                         <p>Novo prato</p>
                     </button>
                 )}
-                <button type="button" onClick={handleSignOut}>
+                <button aria-label={"Logout"} type="button" onClick={handleSignOut}>
                     <p>Sair</p>
                 </button>
             </Main>

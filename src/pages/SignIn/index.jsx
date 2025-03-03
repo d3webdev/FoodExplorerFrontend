@@ -48,8 +48,8 @@ export function SignIn() {
                     placeholder="No mínimo 6 caracteres"
                     onChange={(e) => setPassword(e.target.value)}
                 />
-                <Button type="button" title={'Entrar'} onClick={handleSignIn} />
-                <ButtonText onClick={()=>handleNavigate()} title={'Criar uma conta'}  />
+                <Button aria-label={"SignIn"} type="button" title={'Entrar'} onClick={handleSignIn} />
+                <ButtonText aria-label={"SignUp"} onClick={()=>handleNavigate()} title={'Criar uma conta'}  />
             </Form>
         </Container>
     );

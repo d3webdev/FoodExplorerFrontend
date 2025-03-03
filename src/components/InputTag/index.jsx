@@ -9,7 +9,7 @@ export function InputTag({ text, isNew = false, id = null, onClick, ...rest }) {
     return (
         <Container $isNew={isNew} id={id}>
             <input type="text" id={id} value={text} disabled={!isNew} size={size} {...rest} />
-            <button type="button" onClick={onClick}>
+            <button aria-label="AddTag and DelTag" type="button" onClick={onClick}>
                 {isNew ? <FiPlus size={16} /> : <FiX size={16} />}
             </button>
         </Container>

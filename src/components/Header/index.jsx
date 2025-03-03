@@ -65,6 +65,7 @@ export function Header({ receipt = true }) {
                     onCloseMenu={() => setMenuActive(false)}
                 />
                 <button
+                    aria-label={'Open menu'}
                     className="btn-menu"
                     onClick={() => setMenuActive(true)}
                 >
@@ -75,7 +76,9 @@ export function Header({ receipt = true }) {
                         <img src={FoodExplorer} alt="Food Explorer" />
                         <p>food explorer</p>
                     </div>
-                    {role === 'admin' && <button>Admin</button>}
+                    {role === 'admin' && (
+                        <button aria-label={'panel'}>Admin</button>
+                    )}
                 </Logo>
                 <Input
                     icon={FiSearch}
@@ -113,13 +116,18 @@ export function Header({ receipt = true }) {
                     />
                 )}
                 <button
+                    aria-label={'Change theme'}
                     className="btn-theme"
                     value="theme"
                     onClick={() => handleTheme()}
                 >
                     {themeStatus ? <FiSun /> : <FiMoon />}
                 </button>
-                <button className="btn-logout" onClick={() => handleSignOut()}>
+                <button
+                    aria-label={'Logout'}
+                    className="btn-logout"
+                    onClick={() => handleSignOut()}
+                >
                     <FiLogOut size={32} />
                 </button>
             </Nav>

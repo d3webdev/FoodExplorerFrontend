@@ -36,11 +36,11 @@ export function Counter({ id, initValue, onCountChange, reset = false }) {
 
     return (
         <Container>
-            <button type="button" onClick={() => handleCount('minus')}>
+            <button type="button" aria-label="Minus counter" onClick={() => handleCount('minus')}>
                 <FiMinus />
             </button>
             <p>{count < 10 ? `0${count}` : count}</p>
-            <button type="button" onClick={() => handleCount('plus')}>
+            <button type="button" aria-label="Plus counter" onClick={() => handleCount('plus')}>
                 <FiPlus />
             </button>
         </Container>

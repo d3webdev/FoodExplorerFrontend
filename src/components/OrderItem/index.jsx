@@ -73,7 +73,7 @@ export function OrderItem({
                         reset={resetStatus}
                         onCountChange={handleCountChange}
                     />
-                    <button onClick={() => handleDeleteItem(dish_id)}>
+                    <button aria-label={"Remove item"} onClick={() => handleDeleteItem(dish_id)}>
                         <PiTrashBold size={16} />
                     </button>
                 </div>

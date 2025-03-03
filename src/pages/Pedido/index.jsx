@@ -74,7 +74,7 @@ export function Pedido() {
     return (
         <MainPage receipt={false}>
             <Section>
-                <button onClick={() => handleNavigate()}>
+                <button aria-label={"Back page"} onClick={() => handleNavigate()}>
                     <p>
                         <FiChevronLeft size={28} />
                         Voltar

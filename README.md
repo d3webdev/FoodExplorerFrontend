@@ -130,22 +130,10 @@ Após fazer login como cliente:
 
 A aplicação é responsiva e se adapta a diferentes tamanhos de tela, proporcionando uma experiência consistente em desktops, tablets e smartphones.
 
-# A aplicação
+# Deploy
 
-Para testar a aplicação, você pode utilizar as seguintes credenciais:
+O deploy foi realizado no link abaixo:
 [Food Explorer App](https://foodexplorer-seven.vercel.app/)
-
-### Credenciais para teste
-
-**Admin:**
-
-- Email: mcastro@foodexplorer.com
-- Senha: fplxK$Z001
-
-**Cliente:**
-
-- Email: amendes@foodexplorer.com
-- Senha: fplxB&033
 
 ---
 
