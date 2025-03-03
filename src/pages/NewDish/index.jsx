@@ -10,7 +10,8 @@ import { Button } from '../../components/Button';
 import { InputTag } from '../../components/InputTag';
 import { toast } from 'react-toastify';
 import { api } from '../../services/api';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
+import { useDish } from '../../context/dish/useDish';
 
 export function NewDish() {
     const [tags, setTags] = useState([]);
@@ -21,7 +22,8 @@ export function NewDish() {
     const [discount, setDiscount] = useState('0');
     const [price, setPrice] = useState('');
     const [description, setDescription] = useState('');
-    const [dishId, setDishId] = useState('');
+
+    const { mutateDish } = useDish();
 
     const navigate = useNavigate();
 
@@ -142,8 +144,43 @@ export function NewDish() {
             const response = await api.post('/dishes', data, {
                 withCredentials: true,
             });
-            // navigate('/');
-            setDishId(response.data.dish_id);
+            await sendImage(response.data.dish_id);
+        } catch (error) {
+            if (error.response) {
+                toast.error(error.response.data.message);
+            } else {
+                toast.error('Não foi possível entrar.');
+            }
+        }
+
+        await sendImage();
+            
+        await mutateDish();
+
+        setImageFile(null);
+        setName('');
+        setCategory('');
+        setPrice('');
+        setDiscount('0');
+        setDescription('');
+        setTags([]);
+        setNewTags('');
+
+        toast.success('Prato adicionado com sucesso!');
+        navigate('/');
+    }
+
+    async function sendImage(dish_id) {
+        if (!dish_id) return;
+
+        const dataImage = new FormData();
+        dataImage.append('image', imageFile);
+        dataImage.append('dish_id', dish_id);
+
+        try {
+            await api.patch('/dishes/image', dataImage, {
+                withCredentials: true,
+            });
         } catch (error) {
             if (error.response) {
                 toast.error(error.response.data.message);
@@ -152,38 +189,6 @@ export function NewDish() {
             }
         }
     }
-
-    useEffect(() => {
-        const dataImage = new FormData();
-        dataImage.append('image', imageFile);
-        dataImage.append('dish_id', dishId);
-
-        const sendImage = async () => {
-            try {
-                await api.patch('/dishes/image', dataImage, {
-                    withCredentials: true,
-                });
-                setImageFile(null);
-                setName('');
-                setCategory('');
-                setPrice('');
-                setDiscount('0');
-                setDescription('');
-                setTags([]);
-                setNewTags('');
-                toast.success('Prato adicionado com sucesso!');
-                navigate('/');
-            } catch (error) {
-                if (error.response) {
-                    toast.error(error.response.data.message);
-                } else {
-                    toast.error('Não foi possível entrar.');
-                }
-            }
-        };
-
-        dishId && imageFile && sendImage();
-    }, [imageFile, dishId, navigate]);
 
     return (
         <MainPage>

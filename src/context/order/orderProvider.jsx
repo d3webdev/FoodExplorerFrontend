@@ -122,7 +122,7 @@ function OrderProvider({ children }) {
                     getOrderId();
                 }
             } else {
-                getOrderId();
+                if (user.role === 'customer') getOrderId();
             }
             setInitialized(true);
         }

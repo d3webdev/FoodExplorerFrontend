@@ -14,8 +14,6 @@ import { useEffect, useState } from 'react';
 import { api } from '../../services/api';
 import { useParams } from 'react-router-dom';
 import { useDish } from '../../context/dish/useDish';
-//import { Input } from '../../components/Input';
-//import { useState } from 'react';
 
 export function EditDish() {
     const [tags, setTags] = useState([]);
@@ -27,9 +25,9 @@ export function EditDish() {
     const [discount, setDiscount] = useState('');
     const [price, setPrice] = useState('');
     const [description, setDescription] = useState('');
-
+    
     const params = useParams();
-    const dish_id = Number(params.id);
+    const [dish_id, setDishId] = useState(Number(params.id));
 
     const { getDish, mutateDish } = useDish();
 
@@ -65,17 +63,14 @@ export function EditDish() {
             errors.tags = 'Adicione o ingrediente antes de adicionar o prato';
         }
 
-        // Validação do nome
         if (!name.trim()) {
             errors.name = 'O nome do prato é obrigatório';
         }
 
-        // Validação da categoria
         if (!category || category === '-') {
             errors.category = 'Selecione uma categoria válida';
         }
 
-        // Validação do preço
         if (!price) {
             errors.price = 'O preço é obrigatório';
         } else {
@@ -86,7 +81,6 @@ export function EditDish() {
             }
         }
 
-        // Validação do desconto
         if (discount) {
             const discountValue = parseFloat(discount.replace(',', '.'));
             if (
@@ -98,12 +92,10 @@ export function EditDish() {
             }
         }
 
-        // Validação da descrição
         if (!description.trim()) {
             errors.description = 'A descrição é obrigatória';
         }
 
-        // Validação dos ingredientes
         if (tags.length === 0) {
             errors.tags = 'Adicione pelo menos um ingrediente';
         }
@@ -123,7 +115,6 @@ export function EditDish() {
         description,
         tags,
     }) {
-
         const validation = handleValidateForm();
 
         if (!validation.isValid) {
@@ -139,6 +130,7 @@ export function EditDish() {
             category,
             price: parseFloat(String(price).replace(',', '.')),
             discount,
+            image: image,
             description,
             ingredients: tags,
         };
@@ -156,9 +148,9 @@ export function EditDish() {
         }
 
         await sendImage();
-        
+
         await mutateDish();
-        
+
         setImageFile(null);
         setImage(null);
         setName('');
@@ -169,8 +161,8 @@ export function EditDish() {
         setTags([]);
         setNewTags('');
 
-
         toast.success('Prato atualizado com sucesso!');
+        navigate('/');
     }
 
     async function sendImage() {
@@ -198,6 +190,9 @@ export function EditDish() {
             await api.delete(`/dishes/${dish_id}`, {
                 withCredentials: true,
             });
+            setDishId(null);
+            await mutateDish();
+
             toast.success('Prato excluído com sucesso!');
             navigate('/');
         } catch (error) {
@@ -210,6 +205,7 @@ export function EditDish() {
     }
 
     useEffect(() => {
+        if(!dish_id) return;
         (async () => {
             try {
                 const response = await getDish(dish_id);
@@ -229,7 +225,7 @@ export function EditDish() {
                 }
             }
         })();
-    }, [getDish, dish_id ]);
+    }, [getDish, dish_id]);
 
     const handleNavigate = () => {
         navigate('/');

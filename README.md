@@ -137,17 +137,17 @@ O deploy da aplicação esta disponível no endereço:
 ### Credenciais para teste
 
 Para testar a aplicação, você pode utilizar as seguintes credenciais:
-[Food Explorer App](https://food-explorer-pied.vercel.app)
+[Food Explorer App](https://foodexplorer-seven.vercel.app/)
 
 **Admin:**
 
-- Email: silva@mail.com
-- Senha: fplxAdmin001
+- Email: mcastro@foodexplorer.com
+- Senha: fplxK$Z001
 
 **Cliente:**
 
-- Email: castro@email.com
-- Senha: fplxClient002
+- Email: amendes@foodexplorer.com
+- Senha: fplxB&033
 
 ---
 
