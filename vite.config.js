@@ -18,6 +18,10 @@ export default defineConfig(({ mode }) => {
                 protocol: 'ws',
                 host: 'localhost',
             },
+            headers: {
+                'x-content-type-options': 'nosniff',
+                'x-xss-protection': '1; mode=block',
+            },
         },
     };
 });
