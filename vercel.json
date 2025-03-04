@@ -49,7 +49,7 @@
             ]
         },
         {
-            "source": "/assets/(.*\\.js)",
+            "source": "/assets/(.*)\\.js",
             "headers": [
                 {
                     "key": "Cache-Control",
@@ -66,7 +66,7 @@
             ]
         },
         {
-            "source": "/assets/(.*\\.css)",
+            "source": "/assets/(.*)\\.css",
             "headers": [
                 {
                     "key": "Cache-Control",
@@ -83,7 +83,7 @@
             ]
         },
         {
-            "source": "/assets/(.*\\.(png|jpg|jpeg|gif|mp3))",
+            "source": "/assets/(.*)\\.(png|jpg|jpeg|gif|mp3)",
             "headers": [
                 {
                     "key": "Cache-Control",
