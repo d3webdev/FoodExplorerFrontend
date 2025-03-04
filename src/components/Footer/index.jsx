@@ -8,7 +8,7 @@ export function Footer() {
                 <img src={FoodExplorer} alt="" />
                 <p>footer explorer</p>
             </Logo>
-            <p>© 2023 - Todos os direitos reservados.</p>
+            <p>© 2025 - Todos os direitos reservados.</p>
         </Container>
     );
 }
