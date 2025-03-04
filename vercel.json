@@ -23,7 +23,7 @@
             ]
         },
         {
-            "source": "/assets/.*",
+            "source": "/assets/(.*)",
             "headers": [
                 {
                     "key": "X-Content-Type-Options",
