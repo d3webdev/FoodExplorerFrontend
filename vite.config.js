@@ -20,7 +20,6 @@ export default defineConfig(({ mode }) => {
             },
             headers: {
                 'x-content-type-options': 'nosniff',
-                'x-xss-protection': '1; mode=block',
             },
         },
     };
