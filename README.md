@@ -92,28 +92,31 @@ Após fazer login como administrador:
 - **Adicionar pratos**: Clique em "Novo prato" para acessar o formulário de criação, onde você pode:</br>
   <img width="780" alt="Formulario_newdish" src="https://github.com/user-attachments/assets/bc8d77a2-877d-4e7d-bc34-07897730b277" /></br>
 
-          - Fazer upload de imagens
-          - Preencher nome, categoria, preço e descrição
-          - Adicionar ingredientes
-          - Aplicar descontos
+  - Fazer upload de imagens
+  - Preencher nome, categoria, preço e descrição
+  - Adicionar ingredientes
+  - Aplicar descontos
 
 - **Editar pratos**: Clique no lápis localizado no canto superior esquerdo para ter acesso às opções de edição: </br>
-  <img width="780" alt="Formulario_editdish" src="https://github.com/user-attachments/assets/aee48fc5-faaa-42da-84a0-1b78f480495b" /></br>
+  <img width="780" alt="Formulario_editdish" src="https://github.com/user-attachments/assets/aee48fc5-faaa-42da-84a0-1b78f480495b" />
 
-          - Modificar todas as informações do prato
-          - Excluir o prato do menu
+  - Modificar todas as informações do prato
+  - Excluir o prato do menu
 
 ### Funcionalidades para Clientes
 
 Após fazer login como cliente:
 
-- **Navegação pelo cardápio**: A página inicial exibe os pratos organizados por categorias
-- **Busca**: Utilize a barra de pesquisa para encontrar pratos por nome ou ingredientes
-- **Favoritos**: Marque seus pratos preferidos clicando no ícone de coração
-- **Visualização detalhada**: Clique em um prato para ver mais informações
-
-- **Pedidos**:
-
+- **Navegação pelo cardápio**: A página inicial exibe os pratos organizados por categorias </br>
+<img width="780" alt="navegacao-cardapio" src="https://github.com/user-attachments/assets/cb7601ed-c3b9-4c8d-8b64-0f10b29477ea" /> </br>
+- **Busca**: Utilize a barra de pesquisa para encontrar pratos por nome ou ingredientes </br>
+<img width="780" alt="busca" src="https://github.com/user-attachments/assets/3e26e22c-5bf5-458d-b00c-e00151f1b79d" /> </br>
+- **Favoritos**: Marque seus pratos preferidos clicando no ícone de coração </br>
+<img width="311" alt="preferido" src="https://github.com/user-attachments/assets/e2de4cd9-297c-4092-917b-c4f5b6474d5b" /> </br>
+- **Visualização detalhada**: Clique em um prato para ver mais informações </br>
+<img width="780" alt="descricao-prato" src="https://github.com/user-attachments/assets/7e154851-c560-42a8-9fa3-a03a3e3c53e0" /> </br>
+- **Pedidos**:</br>
+<img width="780" alt="pedidos" src="https://github.com/user-attachments/assets/c042d8d3-5fee-4926-83ea-e468f484110f" /> </br>
     - **Seleção de pratos**: Use os botões de + e - para ajustar a quantidade desejada
     - **Carrinho**: Adicione itens ao pedido clicando em "Adicionar"
     - **Gerenciamento de pedido**: Acesse o ícone do pedido no cabeçalho para:
@@ -122,13 +125,18 @@ Após fazer login como cliente:
         - Remover itens
         - Ver valor total
 
-- **Pagamento**:
-    - Selecione o método de pagamento (crédito, débito ou PIX)
-    - Confirme o pedido clicando em "Pagar"
-    - Acompanhe a confirmação do pagamento
-    - Opção para cancelar o pedido antes da finalização
+- **Pagamento**:</br>
+<img width="541" alt="Pagamento-selecao" src="https://github.com/user-attachments/assets/f1fb1254-32c7-48ac-bd4e-c8a5907033a9" /> </br>
+  - Selecione o método de pagamento (crédito, débito ou PIX)
+  - Confirme o pedido clicando em "Pagar"
+  - Acompanhe a confirmação do pagamento
+  - Opção para cancelar o pedido antes da finalização
+</br>
+ <img width="705" alt="pagamento-sucesso" src="https://github.com/user-attachments/assets/f3c330af-4b64-4d69-8ea4-ed5c6dd2b672" /></br>
 
-A aplicação é responsiva e se adapta a diferentes tamanhos de tela, proporcionando uma experiência consistente em desktops, tablets e smartphones.
+A aplicação é responsiva e se adapta a diferentes tamanhos de tela, proporcionando uma experiência consistente em desktops, tablets e smartphones. </br>
+<img width="314" alt="mobile" src="https://github.com/user-attachments/assets/9fb786dc-ca8b-43e1-a21f-89fde89b54d4" /> </br>
+
 
 # Deploy
 
