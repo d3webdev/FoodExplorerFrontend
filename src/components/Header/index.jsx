@@ -102,6 +102,7 @@ export function Header({ receipt = true }) {
                     <Button
                         className="btn-order"
                         Icon={PiReceipt}
+                        isOrderButton={true}
                         title={'Pedidos'}
                         isHeader
                         onClick={() => handleOrder()}

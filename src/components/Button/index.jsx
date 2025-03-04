@@ -9,6 +9,7 @@ export function Button({
     Icon = null,
     price = null,
     isHeader = false,
+    isOrderButton = false,
     ...rest
 }) {
     const { totalOrder } = useOrder();
@@ -36,8 +37,7 @@ export function Button({
                       currency: 'BRL',
                   }).format(price)
                 : ''}
-            {Icon &&
-                Icon.name === 'PiReceipt' &&
+            {isOrderButton &&
                 isHeader &&
                 (totalOrder === 0 ? ' (0)' : ` ${totalOrder}`)}
         </Container>
@@ -49,4 +49,5 @@ Button.propTypes = {
     Icon: PropTypes.elementType,
     price: PropTypes.number,
     isHeader: PropTypes.bool,
+    isOrderButton: PropTypes.bool,
 };
