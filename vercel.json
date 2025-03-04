@@ -83,7 +83,7 @@
             ]
         },
         {
-            "source": "/assets/(.*)\\.(png|jpg|jpeg|gif|mp3)",
+            "source": "/assets/(.*)\\.mp3",
             "headers": [
                 {
                     "key": "Cache-Control",
@@ -91,7 +91,7 @@
                 },
                 {
                     "key": "Content-Type",
-                    "value": "image/jpeg"
+                    "value": "audio/mpeg"
                 },
                 {
                     "key": "X-Content-Type-Options",
